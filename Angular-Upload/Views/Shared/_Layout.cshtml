@@ -6,7 +6,7 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    <script src="~/Scripts/js/vendor/onDomReady.js"></script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -24,6 +24,7 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Upload", "Index", "Upload")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -39,6 +40,10 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/angular")
+    <script src="~/Scripts/js/my-plupload.js"></script>
+    <script src="~/Scripts/js/app.js"></script>
+    <script src="~/Scripts/js/main.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

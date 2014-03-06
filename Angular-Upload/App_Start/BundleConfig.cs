@@ -23,6 +23,11 @@ namespace Angular_Upload
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
+                      "~/Scripts/js/vendor/angular.min.js",
+                      "~/Scripts/js/vendor/plupload.full.js",
+                      "~/Scripts/js/helpers/string.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));

@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div ng-controller="IndexCtrl">
+   
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div ng-class="{'alert-success':uploadedFiles>0, 'alert-danger':uploadedFiles==0}" class="alert" data-ng-show="uploadComplete"><strong>成功上傳 <code ng-bind="uploadedFiles"></code> 個檔案!</strong></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div my-plupload authentication="true" upload-url="{{uploadAction}}" upload-complete="uploadComplete" runtime="runtime" upload-files="uploadedFiles"></div>
+        </div>
+    </div>
+
+</div>
